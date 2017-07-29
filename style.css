@@ -53,12 +53,11 @@ h3 {
 }
 
 #wrapper {
-	/*min-width: 640px;*/
+	
 }
 
 #selection_area {
 	margin: auto 40px auto 40px;
-	/*width: 800px;*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -71,12 +70,10 @@ h3 {
 }
 
 #scoreboard {
-	/*border: thin solid black;*/
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	flex-wrap: wrap;
-	/*width: 300px;*/
 	padding: 10px;
 }
 
@@ -102,8 +99,6 @@ h3 {
 
 .selection_box {
 	display: block;
-	/*margin: 0 auto;*/
-	/*width: 75%;*/
 	border: thick solid black;
 	padding: 20px;
 	background-color: white;

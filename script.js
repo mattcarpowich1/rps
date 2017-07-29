@@ -1,10 +1,10 @@
-var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+// var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 
-if (!touchsupport){ // browser doesn't support touch
-  document.getElementById("rock").className += "jiggly";
-	document.getElementById("paper").className += "jiggly";
-	document.getElementById("scissors").className += "jiggly";
-}
+// if (!touchsupport){ // browser doesn't support touch
+//   document.getElementById("rock").className += "jiggly";
+// 	document.getElementById("paper").className += "jiggly";
+// 	document.getElementById("scissors").className += "jiggly";
+// }
 
 
 
@@ -83,12 +83,14 @@ icon_container.onclick = function(event) {
 
 	//change winner's text color to red for a little and blink their name
 	if (result === "win") {
-		document.getElementById("you").style.color = "#ad0b95";
-		// document.getElementById("you").className += "blink";
+		// document.getElementById("you").style.color = "#ad0b95";
+		document.getElementById("you").className = "blink";
 	} else if (result === "lose") {
-		document.getElementById("computer").style.color = "#ad0b95";
-		// document.getElementById("computer").className += "blink";
+		// document.getElementById("computer").style.color = "#ad0b95";
+		document.getElementById("computer").className = "blink";
 	}
+
+	console.log("Just assigned blink, class = " + document.getElementById("you").className);
 
 	//redisplay the icons after a short delay...
 	setTimeout(function() {
@@ -100,10 +102,10 @@ icon_container.onclick = function(event) {
 		document.getElementById("scissors2").style.visibility = "visible";
 
 		//...and also change winner's score color back to white
-		document.getElementById("you").style.color = "white";
-		// document.getElementById("you").className.replace(/(?:^|\s)blink(?!\S)/,'');
-		document.getElementById("computer").style.color = "white";
-		// document.getElementById("computer").className.replace(/(?:^|\s)blink(?!\S)/,'');
+		// document.getElementById("you").style.color = "white";
+		document.getElementById("you").className = "no-blink";
+		// document.getElementById("computer").style.color = "white";
+		document.getElementById("computer").className = "no-blink";
 
 		// source.className.replace("jiggly");
 		// document.getElementById("rock").className.replace("jiggly");
@@ -113,7 +115,7 @@ icon_container.onclick = function(event) {
 
 	}, 1600);
 
-
+	// console.log("Just removed blink, class = " + document.getElementById("you").className);
 
 
 };
