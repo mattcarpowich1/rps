@@ -21,6 +21,14 @@ header p {
 	margin: 0;
 }
 
+.rock {
+	color: #f2bd76;
+}
+
+.sciss {
+	color: #458ae9;
+}
+
 #name {
 	color: red;
 	font-size: 1.3em;
