@@ -2,6 +2,7 @@ body {
 	background-color: red;
 	font-family: 'Permanent Marker', sans-serif;
 	background-image: url("images/pinkbackground.jpg");
+	background-size: cover;
 	margin: 0;
 	padding: 0;
 }
