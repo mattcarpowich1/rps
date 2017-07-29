@@ -1,3 +1,14 @@
+var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+
+if (!touchsupport){ // browser doesn't support touch
+  document.getElementById("rock").className += "jiggly";
+	document.getElementById("paper").className += "jiggly";
+	document.getElementById("scissors").className += "jiggly";
+}
+
+
+
+
 var icons = document.getElementById("icon_container");
 
 var options = ["rock", "paper", "scissors"];
@@ -22,6 +33,9 @@ icon_container.onclick = function(event) {
 
 	//find out where in the container the click occured
 	var source = event.target;
+
+	//stop animation on touch screen devices
+	source.className += "no-jiggly";
 
 	//make sure it was an icon that was clicked
 	if (source.id !== "rock" && source.id !== "paper" && source.id !== "scissors") {
@@ -67,14 +81,16 @@ icon_container.onclick = function(event) {
 	document.getElementById("yourScore").textContent = "" + myScore;
 	document.getElementById("opponentScore").textContent = "" + opponentScore;
 
-	//change winner's text color to red for a little
+	//change winner's text color to red for a little and blink their name
 	if (result === "win") {
-		document.getElementById("you").style.color = "red";
+		// document.getElementById("you").style.color = "red";
+		document.getElementById("you").className += "blink";
 	} else if (result === "lose") {
-		document.getElementById("computer").style.color = "red";
+		// document.getElementById("computer").style.color = "red";
+		document.getElementById("computer").className += "blink";
 	}
 
-	//redisplay the icons after a short delay
+	//redisplay the icons after a short delay...
 	setTimeout(function() {
 		document.getElementById("rock").style.visibility = "visible";
 		document.getElementById("rock2").style.visibility = "visible";
@@ -83,8 +99,17 @@ icon_container.onclick = function(event) {
 		document.getElementById("scissors").style.visibility = "visible";
 		document.getElementById("scissors2").style.visibility = "visible";
 
+		//...and also change winner's score color back to white
 		document.getElementById("you").style.color = "white";
+		document.getElementById("you").className.replace("");
 		document.getElementById("computer").style.color = "white";
+		document.getElementById("computer").className.replace("");
+
+		// source.className.replace("jiggly");
+		// document.getElementById("rock").className.replace("jiggly");
+		// document.getElementById("paper").className.replace("jiggly");
+		// document.getElementById("scissors").className.replace("jiggly");
+		source.className = "jiggly";
 
 	}, 1600);
 
@@ -92,3 +117,4 @@ icon_container.onclick = function(event) {
 
 
 };
+
