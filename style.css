@@ -202,10 +202,69 @@ h3 {
 
 @media (max-width: 768px) {
 
+	header {
+		position: absolute;
+		top: 0%;
+		left: calc(50% - 19vw);
+		box-sizing: border-box;
+		width: 38vw;
+		border: 2px solid white;
+		border-top: none;
+
+	}
+
+	#selection_area {
+		margin-top: 10px;
+	}
+
+	h1 {
+		font-size: 4vw;
+	}
+
+	h2 {
+		font-size: 3vw;
+		margin-bottom: 5px;
+	}
+
+	header p {
+		font-size: 2vw;
+	}
+
+	.score {
+		margin-left: 10px;
+		margin-right: 10px;
+		width: 90px;
+	}
+
+	.selection_box {
+		padding: 10px;
+	}
+
+	#icon_container img, #icon_container2 img {
+		width: 12.5vw;
+		height: auto;
+	}
+
+	#icon_container img:nth-child(2), #icon_container2 img:nth-child(2) {
+		width: 9.6vw;
+		height: auto;
+	}
+
 
 }
 
 @media (max-width: 640px) {
+
+	header {
+		position: static;
+		/*top: 0;*/
+		/*left: 0;*/
+		box-sizing: border-box;
+		width: 100%;
+		border: none;
+		border-bottom: 2px solid white;
+
+	}
 
 	h1 {
 		font-size: 2em;
