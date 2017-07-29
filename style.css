@@ -30,7 +30,7 @@ header p {
 }
 
 #name {
-	color: red;
+	color: #3e82de;
 	font-size: 1.3em;
 }
 
@@ -169,12 +169,12 @@ h3 {
   }*/
 }	
 
-.jiggly:hover {
+/*.jiggly:active {
 	animation-name: hover-rotate;
 	animation-duration: .5s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
-}
+}*/
 
 
 @keyframes scoreBlink {
@@ -204,21 +204,21 @@ h3 {
 
 	header {
 		position: absolute;
-		top: 0%;
+		top: 4%;
 		left: calc(50% - 19vw);
 		box-sizing: border-box;
 		width: 38vw;
 		border: 2px solid white;
-		border-top: none;
 
 	}
 
 	#selection_area {
 		margin-top: 10px;
+		/*justify-content: stretch;*/
 	}
 
 	h1 {
-		font-size: 4vw;
+		font-size: 5vw;
 	}
 
 	h2 {
@@ -234,10 +234,15 @@ h3 {
 		margin-left: 10px;
 		margin-right: 10px;
 		width: 90px;
+		margin-top: 150px;
 	}
 
 	.selection_box {
 		padding: 10px;
+	}
+
+	#icon_container, #icon_container2 {
+		/*justify-content: stretch;*/
 	}
 
 	#icon_container img, #icon_container2 img {
@@ -266,6 +271,10 @@ h3 {
 
 	}
 
+	header p {
+		font-size: .8em;
+	}
+
 	h1 {
 		font-size: 2em;
 	}
@@ -280,6 +289,10 @@ h3 {
 
 	#scoreboard {
 		flex-wrap: nowrap;
+	}
+
+	.score {
+		margin-top: 10px;
 	}
 
 	

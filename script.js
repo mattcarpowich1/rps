@@ -83,11 +83,11 @@ icon_container.onclick = function(event) {
 
 	//change winner's text color to red for a little and blink their name
 	if (result === "win") {
-		// document.getElementById("you").style.color = "red";
-		document.getElementById("you").className += "blink";
+		document.getElementById("you").style.color = "#ad0b95";
+		// document.getElementById("you").className += "blink";
 	} else if (result === "lose") {
-		// document.getElementById("computer").style.color = "red";
-		document.getElementById("computer").className += "blink";
+		document.getElementById("computer").style.color = "#ad0b95";
+		// document.getElementById("computer").className += "blink";
 	}
 
 	//redisplay the icons after a short delay...
@@ -101,9 +101,9 @@ icon_container.onclick = function(event) {
 
 		//...and also change winner's score color back to white
 		document.getElementById("you").style.color = "white";
-		document.getElementById("you").className.replace("");
+		// document.getElementById("you").className.replace(/(?:^|\s)blink(?!\S)/,'');
 		document.getElementById("computer").style.color = "white";
-		document.getElementById("computer").className.replace("");
+		// document.getElementById("computer").className.replace(/(?:^|\s)blink(?!\S)/,'');
 
 		// source.className.replace("jiggly");
 		// document.getElementById("rock").className.replace("jiggly");
